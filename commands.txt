@@ -1,0 +1,15 @@
+- docker-compose run --rm composer create-project laravel/laravel:^10.0 .
+
+- docker-compose down
+
+- docker-compose run --rm composer install
+
+- docker-compose up -d server php mysql
+
+- docker-compose up -d server ( if add depends_on in docker-compose.yml )
+
+- docker-compose up -d --build server ( recreate image if Dockerfile is changed )
+
+-  docker-compose exec php php /var/www/html/artisan key:generate
+
+- docker-compose run --rm artisan migrate
